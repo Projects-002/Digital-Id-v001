@@ -3,7 +3,7 @@
 include('../database/db.php');
 
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM users LIMIT 5";
 $feed = mysqli_query($conn, $sql);
 $row = mysqli_num_rows($feed);
 
@@ -53,9 +53,9 @@ $row = mysqli_num_rows($feed);
 				</a>
 			</li>
 			<li>
-				<a href="#">
+				<a href="view.php">
 					<i class='bx bxs-message-dots' ></i>
-					<span class="text">View User</span>
+					<span class="text">View Users</span>
 				</a>
 			</li>
 
