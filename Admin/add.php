@@ -26,19 +26,13 @@ if(!isset($_SESSION['user'])){
       <?php
 
 
-
-
-
 if(isset($_POST['add'])){
-
 
   $f_name = $_POST['f-name'];
   $l_name = $_POST['l-name'];
   $reg_no  = $_POST['reg-no'];
   $email = $_POST['email'];
   $pass = $_POST['pass'];
-
-
 
 
     try{
