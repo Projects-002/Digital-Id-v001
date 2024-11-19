@@ -19,12 +19,14 @@ if(isset($_POST['submit'])) {
         
         // Verify the password
         if($pass == $user['Pass']) {
+          
             session_start();
             $_SESSION['user'] = $username;
 
             // Redirect based on user role
-            if($user['U_Role'] == 'user') {
+            if($user['U_Role'] == 'user') { 
                 header('location: dashboard.php?uid='.$user['SN']);
+    
             } else {
                 header('location: Admin/index.php?uid='.$user['SN']);
             }
@@ -70,7 +72,7 @@ if(isset($_POST['submit'])) {
                 </div>
               </div>
             </div>
-            <form action="index.php" method="POST">
+            <form action="login.php" method="POST">
               <div class="row gy-3 gy-md-4 overflow-hidden">
                 <div class="col-12">
                   <label for="email" class="form-label">Username <span class="text-danger">*</span></label>
